@@ -1,0 +1,44 @@
+
+# # ── Audio / Video ingestion ───────────────────
+# yt-dlp>=2024.4.9                  # Download audio from YouTube URLs
+# pydub>=0.25.1                     # Audio slicing & format conversion
+# ffmpeg-python>=0.2.0              # FFmpeg bindings (ffmpeg binary must be on PATH)
+
+# # ── Transcription (local Whisper) ────────────
+# openai-whisper>=20231117          # OpenAI Whisper (local inference)
+# torch>=2.2.0                      # PyTorch backend for Whisper
+# torchaudio>=2.2.0                 # Audio loading utilities for torch
+
+# # ── Translation (Hindi → English) ────────────
+# deep-translator>=1.11.4           # Lightweight translation wrapper (Google backend, free tier)
+# # Optional heavier alternative — uncomment if you prefer a local model:
+# # transformers>=4.40.0
+# # sentencepiece>=0.2.0
+
+# # ── LLM / LangChain LCEL + Mistral ───────────
+# langchain>=0.2.0                  # Core LangChain & LCEL
+# langchain-core>=0.2.0             # Runnables, prompts, output parsers
+# langchain-community>=0.2.0        # Community integrations (Chroma, HF, etc.)
+# langchain-mistralai>=0.1.8        # Official Mistral AI chat model integration
+# mistralai>=1.0.0                  # Mistral Python SDK (free API tier)
+
+# # ── Embeddings (HuggingFace) ─────────────────
+langchain-huggingface>=0.0.3      # HuggingFaceEmbeddings wrapper
+sentence-transformers>=2.7.0      # Local embedding models (e.g. all-MiniLM-L6-v2)
+
+# # ── RAG / Vector store (ChromaDB) ────────────
+chromadb>=0.5.0                   # Local ChromaDB vector store
+# tiktoken>=0.7.0                   # Token counting for text splitters
+
+# # ── Streamlit UI ─────────────────────────────
+# streamlit>=1.35.0                 # Web UI framework
+
+# # ── Export (PDF & TXT) ───────────────────────
+# reportlab>=4.2.0                  # PDF generation
+# fpdf2>=2.7.9                      # Alternative lightweight PDF library
+
+# # ── Utilities ────────────────────────────────
+# python-dotenv>=1.0.0              # Load .env for API keys
+# numpy>=1.26.0                     # Numerical ops (Whisper / torch dependency)
+# tqdm>=4.66.0                      # Progress bars
+# requests>=2.31.0                  # HTTP calls
